@@ -1,0 +1,37 @@
+testmon: @fabric {
+  @plane(class: "swim.testmon.Main")
+
+  @node {
+    pattern: "/sensor/:id"
+    @agent(class: "swim.testmon.service.SensorService")
+  }  
+
+  @node {
+    pattern: "/device"
+    @agent(class: "swim.testmon.service.DeviceService")
+  }  
+
+  @node {
+    pattern: "/bot/:id"
+    @agent(class: "swim.testmon.service.BotService")
+  }  
+
+  @node {
+    pattern: "/aggregate"
+    @agent(class: "swim.testmon.service.AggregateService")
+  }  
+
+  @node {
+    pattern: "/zone"
+    @agent(class: "swim.testmon.service.ZoneService")
+  }  
+
+}
+
+@web(port: 9001) {
+  space: "testmon"
+  @websocket {
+    serverCompressionLevel: 0# -1 = default; 0 = off; 1-9 = deflate level
+    clientCompressionLevel: 0# -1 = default; 0 = off; 1-9 = deflate level
+  }
+}

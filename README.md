@@ -47,8 +47,8 @@ Every device on the network has a corresponding webpage which shows the current 
 All the code required to deploy and run this application is located in this repository, including bash scripts to get things up and running. You will need to be running in a Unix like environment to be able to run this demo. We use both Debian and Ubuntu but you are not limited to just those distributions. For Windows you can setup an compatible environment: the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10) (Prefer to run Ubuntu 18.04 LTS). NodeJS 9.11.1 or greater, Java 9 or greater, Git, and Gradle are all required in order to run the demo. Be sure those are setup before continuing.
 
 To get started:
-1. Clone the repo `git clone https://github.com/aimwts/testcenter.git`
-2. CD into the new directory `cd testcenter`
+1. Clone the repo `git clone https://github.com/aimwts/testcenter-master.git`
+2. CD into the new directory `cd testcenter-master`
 3. from the main project directory run:
    * `./bin/buildAll.sh config=raspi2`, this will build both Swim and install NodeJS dependencies
    * `./bin/startAll.sh config=raspi2`, this will start both Swim and NodeJS

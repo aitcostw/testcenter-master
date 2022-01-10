@@ -32,6 +32,12 @@ Inside the TestCenter, there are a number of Raspberry Pi devices with various r
 
 ![Demo Application Map](https://raw.githubusercontent.com/aimwts/aiTAAS-Edge/master/TC%20IP%20config.jpg "Demo Application Map")
 
+# On-Line DEMO 
+
+http://r.aitestcenter.net:8080
+
+# More info
+
 Each device is also running a minimal NodeJS server alongside the EdgeOS Web Agents. Node is used to serve the various status pages used by the web app and as a data bridge from the sensors into EdgeOS. Unlike a traditional web application where all the pages are hosted in a central place, EdgeOS web applications can be hosted from each device. This ensures the UI is showing the real time data possible without the latency of being routed through various databases and/or cloud services.
 
 A *Tester Monitor* device, or *TesterMon* for short, is a single Raspberry Pi running both EDgeOS and Node. The device's role as a TesterMon is to report the current state of a single Tsensor to which its attached. That Pi is connected to an Arduino via a serial connection which is read by a service in Node. That Arduino has one or more sensors attached to it and simply sends the values of each sensor over the serial connection as a JSON message. Those messages are picked up by the bridge, parsed and sent into EdgeOS. In this case the bridge is in Node but it can also be in Java or Python. Each sensor will automatically get its own Sensor Web Agent inside EdgeOS. That Sensor Web Agent will have Lanes which hold the latest sensor value, a history of that sensor value, Alert Lanes and Alert Threshold Lanes which manage triggering alerts based on each sensor value.

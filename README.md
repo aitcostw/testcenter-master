@@ -1,5 +1,6 @@
 # TAAS EdgeOS TestCenter Demo - Demo running in Lab on 8/11/20
-# updated check: 10/20/2020 
+# updated check: 10/20/2020
+# New update: 9/5/2022
 ## Overview
 
 This is an advanced sample application that demonstrates many of the key capabilities enabled by EdgeOS, such as: 
@@ -32,7 +33,7 @@ Inside the TestCenter, there are a number of Raspberry Pi devices with various r
 
 ![Demo Application Map](https://raw.githubusercontent.com/aimwts/aiTAAS-Edge/master/TC%20IP%20config.jpg "Demo Application Map")
 
-# On-Line DEMO 
+# On-Line DEMO - contact us for a developer account
 
 http://r.aitestcenter.net:8080
 
